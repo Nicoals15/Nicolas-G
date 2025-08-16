@@ -40,6 +40,15 @@ body{
     height: 100px;
 }
 
+#login {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-top: 20px; /* Espacio superior */
+    border-radius: 5px;
+}
+
+
 #menu{
     clear: both;
     background: #222;
@@ -72,4 +81,42 @@ body{
 
 #menu ul li a:hover{
     background: #01b1ea;
+}
+
+
+/*conten*/
+#content{
+    margin: 0px auto;
+    overflow: hidden;
+    background: wheat;
+}
+
+#lateral{
+    width: 20%;
+    min-height: 300px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10 px;
+   border: rebeccapurple 1px solid;
+}
+
+#lateral .block_asaide{
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    border: 1px solid blue;
+}
+#lateral h2{
+    display: block;
+    color: black;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #e1e1e1;
+    border: 2px solid #01b1ea;
 }
