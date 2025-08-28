@@ -15,4 +15,26 @@ CREATE TABLE IF NOT EXISTS t_usuarios(
 
 )ENGINE=InnoDB;
 
-INSERT INTO t_usuario VALUES(NULL,'admin','admin','admin@admin.com','1234','admin','imagen');
+INSERT INTO t_usuarios VALUES(NULL,'admin','admin','admin@admin.com','1234','admin','imagen');
+
+CREATE TABLE IF NOT EXISTS t_categorias(
+    id_categoria INT(11) auto_increment NOT NULL,
+    Nombre_categoria VARCHAR (100) NOT NULL,
+    CONSTRAINT  pk_categoria  Primary key (id_categoria)
+)ENGINE=InnoDB;
+
+INSERT INTO t_categorias VALUES(NULL,'construccion'),(NULL,'electricos'),(NULL,'pisos')
+
+CREATE TABLE IF NOT EXISTS t_productos(
+    id_producto INT(11) auto_increment NOT NULL,
+    Nombre_producto VARCHAR (100) NOT NULL,
+    Precio FLOAT (100,2) NOT NULL,
+    Stock INT (100) NOT NULL,
+    Oferta  VARCHAR(50) NOT NULL,
+    Fecha DATE NOT NULL,
+    Imagen VARCHAR(255),
+    id_categoria INT(11) NOT NULL, 
+    CONSTRAINT pk_producto  Primary key (id_producto),
+    CONSTRAINT fk_producto_categoria FOREIGN KEY(id_categoria) REFERENCES t_categorias(id_categoria)
+)ENGINE=InnoDB;
+
