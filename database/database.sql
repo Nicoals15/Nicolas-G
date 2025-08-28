@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS t_categorias(
     CONSTRAINT  pk_categoria  Primary key (id_categoria)
 )ENGINE=InnoDB;
 
-INSERT INTO t_categorias VALUES(NULL,'construccion'),(NULL,'electricos'),(NULL,'pisos')
+INSERT INTO t_categorias VALUES(NULL,'construccion'),(NULL,'electricos'),(NULL,'pisos');
 
 CREATE TABLE IF NOT EXISTS t_productos(
     id_producto INT(11) auto_increment NOT NULL,
@@ -38,3 +38,12 @@ CREATE TABLE IF NOT EXISTS t_productos(
     CONSTRAINT fk_producto_categoria FOREIGN KEY(id_categoria) REFERENCES t_categorias(id_categoria)
 )ENGINE=InnoDB;
 
+CREATE TABLE IF NOT EXISTS t_pedidos(
+    id_pedido INT(11) auto_increment NOT NULL,
+    Cantidad INT (100) NOT NULL,
+    Fecha DATE NOT NULL,
+    Imagen VARCHAR(255),
+    id_usuario INT(11) NOT NULL, 
+    CONSTRAINT pk_pedidos  Primary key (id_pedido),
+    CONSTRAINT fk_usuario_pedido FOREIGN KEY(id_usuario) REFERENCES t_usuarios(id_usuario)
+)ENGINE=InnoDB;
