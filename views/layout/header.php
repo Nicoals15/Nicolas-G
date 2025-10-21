@@ -11,7 +11,7 @@
     <div id="container">
         <header id="header">
             <div id="logo">
-                <img src="/assets/css/img/descarga.jpg" alt="imgen logo">
+                <img src="/assets/img/descarga.jpg" alt="imgen logo">
             </div>
         </header>
         <nav id="menu">

@@ -5,9 +5,9 @@
         private $id;
         private $nombre;
 
-        private $db
+        private $db;
 
-        public function_construct(){
+        public function __construct(){
             $this->db = Database::connect();
         }
 
